@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.seminario.appscrum.Proyectos">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <Button
+            android:id="@+id/crear_proyc"
+            android:layout_width="170dp"
+            android:layout_height="50dp"
+            android:background="@android:color/holo_red_dark"
+            android:drawableLeft="@android:drawable/ic_menu_add"
+            android:gravity="center_vertical|center_horizontal|center"
+            android:text="Crear Proyecto"
+            android:textColor="@android:color/background_light" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Mis proyectos"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_dark"
+            android:textSize="20dp" />
+
+        <ListView
+            android:id="@+id/lista_proy"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
