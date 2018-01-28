@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".Registro_user" />
         <activity android:name=".Proyectos" />
-        <activity android:name=".Crear_proyecto"></activity>
+        <activity android:name=".Crear_proyecto" />
+        <activity android:name=".Crear_miembro"></activity>
     </application>
 
 </manifest>
