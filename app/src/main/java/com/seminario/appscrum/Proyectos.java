@@ -5,6 +5,7 @@ import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,6 +14,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 
 import Data.DataBase_OH;
 import Data.Proyecto;
@@ -25,9 +27,11 @@ public class Proyectos extends AppCompatActivity implements View.OnClickListener
     String nombrp, alcanp, sociop;
     Date fecha_crep;
     int idusrp, idequp;
+    HashMap<Integer,String> lisPoyectos_detalles;
     ArrayList<String> listaProyectos;
     ArrayAdapter<String> listaP;
     Cursor resultado;
+    int cont = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,13 +44,25 @@ public class Proyectos extends AppCompatActivity implements View.OnClickListener
         lista_proy = (ListView)findViewById(R.id.lista_proy);
 
         listaProyectos = new ArrayList<String>();
+        lisPoyectos_detalles = new HashMap<Integer, String>();
         while(resultado.moveToNext()){
             listaProyectos.add(resultado.getString(1));
-            Toast.makeText(this, "test "+resultado.getString(1), Toast.LENGTH_LONG).show();
+            lisPoyectos_detalles.put(cont, resultado.getString(0));
+            cont++;
         }
 
         listaP = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listaProyectos);
+        listaP.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         lista_proy.setAdapter(listaP);
+
+        lista_proy.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                String id_p = "id: "+lisPoyectos_detalles.get(i);
+
+                Toast.makeText(getApplicationContext(), "id "+id_p, Toast.LENGTH_LONG).show();
+            }
+        });
 
         crear_proyc = (Button) findViewById(R.id.crear_proyc);
         crear_proyc.setOnClickListener(this);

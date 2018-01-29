@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Appscrum2.iml" filepath="$PROJECT_DIR$/Appscrum2.iml" />
+      <module fileurl="file://C:\Users\Ralph\Desktop\proyectoscrum\Appscrum2.iml" filepath="C:\Users\Ralph\Desktop\proyectoscrum\Appscrum2.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\Ralph\Desktop\proyectoscrum\app\app.iml" filepath="C:\Users\Ralph\Desktop\proyectoscrum\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/proyectoscrum.iml" filepath="$PROJECT_DIR$/proyectoscrum.iml" />
+      <module fileurl="file://C:\Users\Ralph\Desktop\proyectoscrum\proyectoscrum.iml" filepath="C:\Users\Ralph\Desktop\proyectoscrum\proyectoscrum.iml" />
     </modules>
   </component>
 </project>

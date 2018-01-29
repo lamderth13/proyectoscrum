@@ -21,8 +21,8 @@ public class Crear_miembro extends AppCompatActivity implements OnClickListener 
 
     }
 
-    @Override
+    /*@Override
     public void onPointerCaptureChanged(boolean hasCapture) {
 
-    }
+    }*/
 }
